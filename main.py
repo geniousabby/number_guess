@@ -57,6 +57,7 @@ print(f"Welcome, {name}!")
 
 # Ask if they want to play again, only accepting 'y' or 'n'
 
+
 def format_yesorno(name: str) -> str:
 
     yesorno = input("Would you like to retry? Type Y for yes and N for no." )
@@ -66,10 +67,10 @@ def format_yesorno(name: str) -> str:
     # Convert name to lowercase
     clean_yesorno = clean_yesorno.lower()
 
+# Loop game
 
-if format_yesorno == "y"
-    # Loop game
+if clean_yesorno == input("")
+    print
     
-
 # Run the game
 
