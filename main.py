@@ -1,20 +1,19 @@
-
 """
-Genious Abby's number guessing game!
-
+This is Genious abby's number guessing game.
+The system picks a random number from 1 to 100 and the player has 10 attempts to guess.
+If they run out of attempts they will lose the game.
 """
-
 # Introduce user to the game
 
 print("Hello user! Welcome to Genious Abby's number guessing game.")
-name = input("Please type your name.")
+name = input("Please type your name. ")
 print(f"Welcome, {name}!")
 
 # Import random module to generate a random number
-
+import random
 
 # Function to get a valid integer input with error handling
-
+def get_number() -> str:
 
 # Function to get a valid 'y' or 'n' response from the user
 
@@ -58,19 +57,8 @@ print(f"Welcome, {name}!")
 # Ask if they want to play again, only accepting 'y' or 'n'
 
 
-def format_yesorno(name: str) -> str:
-
-    yesorno = input("Would you like to retry? Type Y for yes and N for no." )
-        # Clean up the name (remove extra spaces)
-    clean_yesorno = yesorno.strip()
-
-    # Convert name to lowercase
-    clean_yesorno = clean_yesorno.lower()
-
 # Loop game
 
-if clean_yesorno == input("")
-    print
-    
+
 # Run the game
 
