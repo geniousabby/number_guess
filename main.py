@@ -1,7 +1,6 @@
 """
 This is Genious abby's number guessing game.
-The system picks a random number from 1 to 100 and the player has 10 attempts to guess.
-If they run out of attempts they will lose the game.
+The system picks a random number from 1 to 100.
 """
 # Introduce user to the game
 
@@ -13,7 +12,13 @@ print(f"Welcome, {name}!")
 import random
 
 # Function to get a valid integer input with error handling
-def get_number() -> str:
+def nnumber_guessing_game():
+    print("I am guessing a number from 1 to 100.")
+
+    number = random.randint(1, 100)
+    attempts = 0
+
+    while True
 
 # Function to get a valid 'y' or 'n' response from the user
 
