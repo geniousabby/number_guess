@@ -19,6 +19,17 @@ def nnumber_guessing_game():
     attempts = 0
 
     while True
+        try:
+            guess = int(input("Guess a number: "))
+            attempts += 1
+
+            if guess = <1 or >100
+            print("Please enter a valid number.")
+
+            if guess = number
+            print(f"Yay! You got the number in {attempts}")
+
+        except ValueError
 
 # Function to get a valid 'y' or 'n' response from the user
 
