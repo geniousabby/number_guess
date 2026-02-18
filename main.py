@@ -1,13 +1,6 @@
 """
-This is Genious abby's number guessing game.
-The system picks a random number from 1 to 100.
+Number guessing game.
 """
-# Introduce user to the game
-
-print("Hello user! Welcome to Genious Abby's number guessing game.")
-name = input("Please type your name here. ")
-print(f"Welcome, {name}!")
-
 # Import random module to generate a random number
 import random
 
@@ -23,25 +16,28 @@ def number_guessing_game():
             guess = int(input("Guess a number: "))
             attempts += 1
 
-            if guess == < 1 or > 100
+            if guess == < 1 or > 100:
             print("Please enter a valid number.")
 
-        elif guess == number:
-        print(f"Yay! You got the number in {attempts}!")
+            elif guess == number:
+            print(f"Yay! You got the number in {attempts}!")
 
-        except ValueError
+        except ValueError:
         print("Please enter a number.")
 
 
+
+print("Hello user! Welcome to Genious Abby's number guessing game.")
+name = input("Please type your name here. ")
+print(f"Welcome, {name}!")
 print(f"{number_guessing_game}")
 
-
 # Function to get a valid 'y' or 'n' response from the user
-
+ 
 
 # Function to play one round of the game
 
-    
+
 # Ask for number range
 
 
@@ -78,8 +74,48 @@ print(f"{number_guessing_game}")
 # Ask if they want to play again, only accepting 'y' or 'n'
 
 
-# Loop game
-
-
 # Run the game
 
+
+
+
+
+
+
+
+
+
+"""
+# Old code
+
+    print("Hello user! Welcome to Genious Abby's number guessing game.")
+    name = input("Please type your name here. ")
+    print(f"Welcome, {name}!")
+
+    # Import random module to generate a random number
+    import random
+
+    # Function to get a valid integer input with error handling
+    def number_guessing_game():
+        print("I am guessing a number from 1 to 100.")
+
+        number = random.randint(1, 100)
+        attempts = 0
+
+        while True:
+            try:
+                guess = int(input("Guess a number: "))
+                attempts += 1
+
+                if guess == < 1 or > 100
+                print("Please enter a valid number.")
+
+            elif guess == number:
+            print(f"Yay! You got the number in {attempts}!")
+
+            except ValueError
+            print("Please enter a number.")
+
+
+    print(f"{number_guessing_game}")
+"""
