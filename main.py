@@ -5,10 +5,13 @@ Number guessing game.
 import random
 
 # Function to get a valid integer input with error handling
-def number_guessing_game():
-    print("I am guessing a number from 1 to 100.")
 
-    number = random.randint(1, 100)
+def number_get() -> int:
+     number = random.randint(1, 100)
+
+
+def number_guessing_game():
+
     attempts = 0
 
     while True:
@@ -16,21 +19,31 @@ def number_guessing_game():
             guess = int(input("Guess a number: "))
             attempts += 1
 
-            if guess == < 1 or > 100:
-            print("Please enter a valid number.")
+            if guess <0:
+                print("Please enter a valid number.")
 
-            elif guess == number:
-            print(f"Yay! You got the number in {attempts}!")
+            if guess == number:
+                print(f"Yay! You got the number in {attempts}!")
+
+            else:
+                print("Please enetr a valid number.")
+
+            break
 
         except ValueError:
-        print("Please enter a number.")
-
-
+            print("Please enter a number.")
+    
 
 print("Hello user! Welcome to Genious Abby's number guessing game.")
+
 name = input("Please type your name here. ")
+
 print(f"Welcome, {name}!")
+
+print("I am guessing a number from 1 to 100.")
+
 print(f"{number_guessing_game}")
+
 
 # Function to get a valid 'y' or 'n' response from the user
  
