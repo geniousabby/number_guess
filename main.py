@@ -13,6 +13,14 @@ def get_valid_integer(prompt):
         except ValueError:
             print("Please eneter a valid integer.")
 
+def yes_or_no(prompt):
+    while True:
+        replay = input(prompt).lower()
+
+        if replay in ["y", "n"]:
+            return replay
+        else:
+            print("Please enter 'y' or 'n'")
 
 def number_guessing_game() -> None:
     while True:
@@ -38,37 +46,43 @@ def number_guessing_game() -> None:
     real_number = random.randint(lowest, highest)
 
     attempts = 0
-    while True:
-        try:
-            guess = int(input("Guess a number: "))
 
-            if guess < real_number:
+    while attempts < max_attempts:
+        guess = get_valid_integer(
+            f"Attempt {attempts + 1}/{max_attempts}: Enter your guess. "
+        )
+        attempts += 1
+
+        if guess < real_number:
                 print("Too low! Try again.")
-                attempts += 1
 
-            elif guess > real_number:
+        elif guess > real_number:
                 print("Too high! Try again.")
-                attempts += 1
                 
-            elif guess == real_number:
+        elif guess == real_number:
                 print(f"Yay! You got the number in {attempts} attempts!")
 
                 break
            
-        except ValueError:
-            print("Please enter a number.")
+    
 
+def main():
 
+    print("Hello user! Welcome to Genious Abby's number guessing game.")
 
+    name = input("Please type your name here. ")
 
-print("Hello user! Welcome to Genious Abby's number guessing game.")
+    print(f"Welcome, {name}!")
 
-name = input("Please type your name here. ")
+    while True:
+        number_guessing_game()
+        play_again = yes_or_no("Would you like to play again? (y/n): ")
+        if play_again == 'n':
+            print("Thanks for playing!")
+            break
 
-print(f"Welcome, {name}!")
-
-print(f"{number_guessing_game()}")
-
+if __name__ == "__main__":
+    main()
 
 # Function to get a valid 'y' or 'n' response from the user
  
