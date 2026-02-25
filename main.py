@@ -7,6 +7,8 @@ import random
 # Function to get a valid integer input with error handling
 
 def get_valid_integer(prompt):
+    
+    # Generate random number
     while True:
         try:
             return int(input(prompt))
@@ -14,6 +16,7 @@ def get_valid_integer(prompt):
             print("Please eneter a valid integer.")
 
 def yes_or_no(prompt):
+    # Function to get a valid 'y' or 'n' response from the user
     while True:
         replay = input(prompt).lower()
 
@@ -22,7 +25,12 @@ def yes_or_no(prompt):
         else:
             print("Please enter 'y' or 'n'")
 
+
+# Function to play one round of the game
+
 def number_guessing_game() -> None:
+
+    # Ask for number range
     while True:
         lowest = get_valid_integer("Please type the lowest number to guess. ")
 
@@ -34,9 +42,9 @@ def number_guessing_game() -> None:
         else:
             print("The lowest number should be less than the highest number.")
 
-    #whatever
 
     
+    # Ask for number of attempts, track number of attempts
 
     max_attempts = get_valid_integer("How many attempts do you want? ")
     while max_attempts <= 0:
@@ -53,21 +61,36 @@ def number_guessing_game() -> None:
         )
         attempts += 1
 
+        if attempts == max_attempts:
+             
+             # If max attempts are used up, reveal the correct number
+             print(f"You have run out of attempts. The real number is {real_number}")
+             break
+
+    # Ensure low_number is less than high_number
+
         if guess < real_number:
+                
+                # Check if guess is too low or too high
                 print("Too low! Try again.")
 
         elif guess > real_number:
+                
+                # Check if guess is too low or too high
                 print("Too high! Try again.")
                 
         elif guess == real_number:
+                
+                # Display success message if guessed correctly
                 print(f"Yay! You got the number in {attempts} attempts!")
 
                 break
            
     
-
 def main():
+    # Main game loop
 
+    # Ask for user's name and greet them
     print("Hello user! Welcome to Genious Abby's number guessing game.")
 
     name = input("Please type your name here. ")
@@ -75,55 +98,16 @@ def main():
     print(f"Welcome, {name}!")
 
     while True:
+        
+        # Loop for user guesses
         number_guessing_game()
         play_again = yes_or_no("Would you like to play again? (y/n): ")
+        
+        # Ask if they want to play again, only accepting 'y' or 'n'
         if play_again == 'n':
             print("Thanks for playing!")
             break
 
+# Run the game
 if __name__ == "__main__":
     main()
-
-# Function to get a valid 'y' or 'n' response from the user
- 
-
-# Function to play one round of the game
-
-
-# Ask for number range
-
-
-# Ensure low_number is less than high_number
-
-
-# Ask for number of attempts
-
-
-# Generate random number
-
-
-# Track number of attempts
-
-
-# Loop for user guesses
-
-
-# Check if guess is too low or too high
-
-
-# Display success message if guessed correctly
-
-
-# If max attempts are used up, reveal the correct number
-
-
-# Main game loop
-
-
-# Ask for user's name and greet them
-
-
-# Ask if they want to play again, only accepting 'y' or 'n'
-
-
-# Run the game
