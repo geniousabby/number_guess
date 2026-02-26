@@ -101,11 +101,11 @@ def main():
         
         # Loop for user guesses
         number_guessing_game()
-        play_again = yes_or_no("Would you like to play again? (y/n): ")
+        play_again = yes_or_no(f"Would you like to play again, {name}? (y/n): ")
         
         # Ask if they want to play again, only accepting 'y' or 'n'
         if play_again == 'n':
-            print("Thanks for playing!")
+            print(f"Thanks for playing, {name}!")
             break
 
 # Run the game
