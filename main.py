@@ -72,19 +72,19 @@ def number_guessing_game() -> None:
         if guess < real_number:
                 
                 # Check if guess is too low or too high
-                print("Too low! Try again.")
+            print("Too low! Try again.")
 
         elif guess > real_number:
                 
                 # Check if guess is too low or too high
-                print("Too high! Try again.")
+            print("Too high! Try again.")
                 
         elif guess == real_number:
                 
                 # Display success message if guessed correctly
-                print(f"Yay! You got the number in {attempts} attempts!")
+            print(f"Yay! You got the number in {attempts} attempts!")
 
-                break
+            break
            
     
 def main():
